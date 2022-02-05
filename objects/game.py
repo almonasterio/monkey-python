@@ -8,7 +8,7 @@ class Game:
 # Create SwordMaster?
 
     def show_menu(self):
-        return input("1.PLAY    2.QUIT ")
+        return input("1.Play    2.Fight SwordMaster     3.Quit")
 
     def combat(self, first_pirate, second_pirate):
         while first_pirate.life and second_pirate.life:

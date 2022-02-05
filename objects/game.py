@@ -30,6 +30,9 @@ class Game:
                 swordmaster.life -= 1
         if swordmaster.life:
             winner, loser = swordmaster, player
+            print(f"Keep trying.")
         else:
             winner, loser = player, swordmaster
+            print(f"You won.")
+            exit()
         print(f"{winner.name} annihilated {loser.name}.")

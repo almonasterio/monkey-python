@@ -2,9 +2,10 @@ import random
 
 
 class Pirate:
-    def __init__(self, insults):
+    def __init__(self, insults, name="Random pirate"):
         self.insults_repo = insults
         self.life = 3
+        self.name = name
         # self.description="stinky pirate"
         # self.insults_used for future implementation
         self.lame_insults = ["I am afraid..",
@@ -21,8 +22,9 @@ class Pirate:
     def responds_back(self, insult_given):
         for i in self.insults_repo:
             if insult_given in list(i.keys()):
-                print(f"Pirate says: {list(i.values())[0]}")
+                print(f"Pirate responds back: {list(i.values())[0]}")
                 return True
-        print(random.choice(self.lame_insults))
+        print("Pirate mumbles:", random.choice(self.lame_insults))
+        print(f"Pirate flinches")
         self.life -= 1
         return False

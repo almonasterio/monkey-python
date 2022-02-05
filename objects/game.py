@@ -5,9 +5,31 @@ class Game:
 
     # def start(self):
 
-# Create Player
-# Create Pirates
 # Create SwordMaster?
 
     def show_menu(self):
         return input("1.PLAY    2.QUIT ")
+
+    def combat(self, first_pirate, second_pirate):
+        while first_pirate.life and second_pirate.life:
+            result = second_pirate.responds_back(first_pirate.insult_action())
+            if result:
+                first_pirate, second_pirate = second_pirate, first_pirate
+
+        print(f"{first_pirate.name} annihilated {second_pirate.name}.")
+        if first_pirate.player and first_pirate.life == 3:
+            print(
+                f"{second_pirate.name}: Wow.. you are good. You might be able to beat the Sword Master")
+        first_pirate.life = 3
+        second_pirate.life = 3
+
+    def combat_swordmaster(self, swordmaster, player):
+        while swordmaster.life and player.life:
+            result = player.responds_back(swordmaster.insult_action())
+            if result:
+                swordmaster.life -= 1
+        if swordmaster.life:
+            winner, loser = swordmaster, player
+        else:
+            winner, loser = player, swordmaster
+        print(f"{winner.name} annihilated {loser.name}.")

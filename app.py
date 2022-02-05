@@ -9,20 +9,22 @@ choice = game.show_menu()
 # while choice != 2:
 #     choice = game.show_menu()
 
-insults_repo12 = [
-    {"insult6": "response1"},
-    {"insult62": "response2"},
-    {"insult63": "response3"}]
-pirate = Pirate(insults_repo12)
-print(pirate.insults_repo)
-player = Player()
+insults_repo = [
+    {"i1": "r1"},
+    {"i2": "r2"},
+    {"i3": "r3"}]
 
-# print(pirate.life)
+insults_repo2 = [
+    {"i6": "r6"},
+    {"i2": "r2"},
+    {"i3": "r3"}]
+pirate = Pirate(insults_repo)
+player = Player(insults_repo2)
+print(player.name)
+print(pirate.name)
 # pirate.responds_back(player.insult_action())
+# winner = pirate
+# loser = player
 
-player.insult_action()
-player.responds_back(pirate.insult_action())
-print(player.life)
-player.responds_back(pirate.insult_action())
-print(player.life)
-player.insult_action()
+# game.combat(pirate, player)
+game.combat_swordmaster(pirate, player)

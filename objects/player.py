@@ -2,13 +2,11 @@ from .pirate import Pirate
 
 
 class Player(Pirate):
-    def __init__(self, name="Guybrush"):
-        # super().__init__(insults={})
-        super().__init__(insults=[{"insult5": "response5"},  {"insult": "response"},
-                                  {"insult2": "response2"}])
-        self.name = name
+    def __init__(self, insults=[], name="Guybrush"):
+        super().__init__(insults, name)
         self.insults_lines = list(map(lambda insult: list(
             insult.keys())[0], self.insults_repo))
+        self.player = True
 
     def display_my_repo_lines(self, list):
         for i in enumerate(list):
@@ -42,6 +40,6 @@ class Player(Pirate):
             if insult_given_response == chosen_response_line:
                 print("Good answer")
                 return True
-            print("Bad answer")
+            print("Bad answer, you flinched")
             self.life -= 1
             return False

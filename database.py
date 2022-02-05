@@ -22,41 +22,19 @@ im9 = {"im9": "r9"}
 im10 = {"im10": "r10"}
 im11 = {"im11": "r11"}
 
-insults_repo = {
-    i1,
-    i5,
-    i8,
-}
-
-# repos should be list of insult objects??
-# [{
-# id=0
-# insullt: "Insulto",
-# response: "Response",
-# level: 0
-# },
-# {
-# insullt: "Insulto",
-# response: "Response",
-# level: 0
-# },
-# ]
-insults_repo = [
-    {"insult1": "response1"},
-    {"insult2": "response2"},
-    {"insult3": "response3"}]
-
-insults_repo2 = [
-    {"insult": "response1"},
-    {"insult4": "response2"},
-    {"insult5": "response3"}]
-
-swordmaster_repo = {
-    "master_insult1": "response1",
-    "master_insult2": "response2",
-    "master_insult3": "response3",
-    "master_insult4": "response4",
-    "master_insult5": "response5",
-    "master_insult6": "response6",
-    "master_insult7": "response1",
-}
+insults_repo1 = [i1, i3, i5]
+insults_repo2 = [i2, i4, i6]
+insults_repo3 = [i9, i8, i7]
+insults_repo4 = [i10, i2, i5]
+insults_repo5 = [i11, i10, i9]
+insults_master_repo = [im1,
+                       im2,
+                       im3,
+                       im4,
+                       im5,
+                       im6,
+                       im7,
+                       im8,
+                       im9,
+                       im10,
+                       im11]
